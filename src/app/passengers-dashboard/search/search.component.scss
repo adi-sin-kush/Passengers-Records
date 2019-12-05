@@ -1,0 +1,17 @@
+div{
+    display: flex;
+    justify-content: center;
+    input{
+        width: 600px;
+        height: 30px;
+        font-size: 20px;
+        margin-right: 12px;
+    }
+    button{
+        width: 100px;
+        color: white;
+        border: 1px solid black;
+        color: black;
+        cursor: pointer;
+    }
+}

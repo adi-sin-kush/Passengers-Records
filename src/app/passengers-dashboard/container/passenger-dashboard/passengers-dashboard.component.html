@@ -1,0 +1,13 @@
+<div class="Details">
+    <h1>Passengers Details</h1>
+    <app-passcount 
+                [items]="passengers">
+    </app-passcount>
+    <app-search></app-search>
+    <app-passdetails
+                *ngFor="let i of passengers"
+                [detail]="i"
+                (handleEdit)="handleEd($event)"
+                (handleRemove)="handleRm($event)">
+    </app-passdetails>
+</div>

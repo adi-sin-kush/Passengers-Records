@@ -1,0 +1,23 @@
+<div>
+    <ul>
+        <li >
+            <input type="text" #fname *ngIf="editing" 
+                            [value]="detail.fullname"
+                            (input)="onNameChange(fname.value)">
+            <div class="card" [ngClass]="{'greener': detail.checkIn}">  
+                <p><strong>Id : </strong>{{ detail.id }}</p>
+                <p><strong>Fullname : </strong>{{ detail.fullname }}</p>
+                <p><strong>CheckIn : </strong>{{ detail.checkIn }}</p>
+                <p><strong>Childrens : </strong>{{ detail.children?.length || 0 }}</p>
+                <div class="btn-div">
+                <button class="btn1" (click)="toggleRemove()">
+                                            Remove
+                                            </button>
+                <button class="btn2" (click)="startEditing()">
+                                            {{ editing ? 'Done' : 'Edit' }}
+                                            </button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
