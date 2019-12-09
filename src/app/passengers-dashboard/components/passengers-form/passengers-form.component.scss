@@ -1,0 +1,13 @@
+div{
+    margin-top: 12px;    
+    padding: 12px;
+    display: flex;
+    
+    label{
+        font-weight: 800;
+    }
+    
+    input,select{
+        margin-left: 12px;
+    }
+}

@@ -8,6 +8,7 @@
                 *ngFor="let i of passengers"
                 [detail]="i"
                 (handleEdit)="handleEd($event)"
-                (handleRemove)="handleRm($event)">
+                (handleRemove)="handleRm($event)"
+                (view)="handleView($event)">
     </app-passdetails>
 </div>

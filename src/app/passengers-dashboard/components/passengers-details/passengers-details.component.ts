@@ -17,7 +17,14 @@ export class PassengersDetailsComponent {
     @Output()
     handleEdit: EventEmitter<any> = new EventEmitter();
 
+    @Output()
+    view: EventEmitter<any> = new EventEmitter();
+
     editing = false;
+
+    gotoPassenger() {
+        this.view.emit(this.detail);
+    }
 
     onNameChange(s: string) {
         this.detail.fullname = s;

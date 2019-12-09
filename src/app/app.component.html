@@ -1,3 +1,15 @@
 <div class="container">
-  <app-pasdash></app-pasdash>
+  <!-- <app-pasdash></app-pasdash> -->
+  <!-- <app-pass-viewer></app-pass-viewer> -->
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <nav>
+        <a  *ngFor="let i of nav"
+            [routerLink]='i.link'
+            routerLinkActive='active' 
+            [routerLinkActiveOptions]="{ exact: i.exact }">{{ i.name }}</a>   
+  </nav>
+  <hr>
+  <router-outlet></router-outlet>
 </div>

@@ -8,7 +8,6 @@
                 <p><strong>Id : </strong>{{ detail.id }}</p>
                 <p><strong>Fullname : </strong>{{ detail.fullname }}</p>
                 <p><strong>CheckIn : </strong>{{ detail.checkIn }}</p>
-                <p><strong>Childrens : </strong>{{ detail.children?.length || 0 }}</p>
                 <div class="btn-div">
                 <button class="btn1" (click)="toggleRemove()">
                                             Remove
@@ -16,6 +15,7 @@
                 <button class="btn2" (click)="startEditing()">
                                             {{ editing ? 'Done' : 'Edit' }}
                                             </button>
+                <button class="btn3" (click)="gotoPassenger()">View</button>
                 </div>
             </div>
         </li>

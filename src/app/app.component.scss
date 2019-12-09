@@ -1,5 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Montserrat&display=swap');
 
 body{
+    font-family: 'Montserrat', sans-serif;   
+}
+header{
+    h1{
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    }
+}
+nav{
+    // background: lightgreen;
     font-family: 'Montserrat', sans-serif;
+    padding: 12px;
+    margin: 15px 0px 12px 12px;
+    a{
+        background: #2A2C2D;
+        padding: 15px;
+        color: white;
+        text-decoration: none;
+        border: 2px;
+        font-size: 18px;
+        margin-right: 12px;
+        font-weight: 500;
+        &.active{
+            background: #3D3B3E;
+            border: 2px;
+            color: rgb(104, 123, 156);
+        }
+    }
+}
+hr{
+    margin-top: 25px;
 }

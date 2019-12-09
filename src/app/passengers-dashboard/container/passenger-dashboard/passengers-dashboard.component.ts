@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Passengers } from '../../Interfaces/Passengers.interface';
 import { PassengersDashBoardService } from '../../passengers-dashboard.service';
-
+import { Router } from '@angular/router';
 @Component({
     selector: 'app-pasdash',
     templateUrl: './passengers-dashboard.component.html',
@@ -10,7 +10,7 @@ import { PassengersDashBoardService } from '../../passengers-dashboard.service';
 export class PassengersDashboardComponent implements OnInit {
 
     passengers: Passengers[];
-    constructor(private service: PassengersDashBoardService) {
+    constructor(private router: Router, private service: PassengersDashBoardService) {
         console.log('constructor called');
      }
     ngOnInit() {
@@ -30,5 +30,8 @@ export class PassengersDashboardComponent implements OnInit {
             return passenger;
         });
         console.log('updated data ', this.passengers);
+    }
+    handleView(event) {
+        this.router.navigate(['/passenger', event.id]);
     }
 }

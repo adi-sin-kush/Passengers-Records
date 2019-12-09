@@ -1,0 +1,42 @@
+<form #form="ngForm" novalidate>    
+    <!-- {{ detail | json }} -->
+    <div>
+        <label>Passenger Name : </label>
+        <input type="text"
+               name="fullname"
+               [ngModel]="detail?.fullname">
+    </div>
+    <div>
+        <label>Passenger Id : </label>
+        <input type="number"
+               name="id"
+               [ngModel]="detail?.id">
+    </div>
+    <div>
+        <label>checkIn : </label>
+            <input type="checkbox"
+                   name="checkIn"
+                   [ngModel]="detail?.checkIn"
+                   (ngModelChange)="toggleCheckIn($event)">
+    </div>
+    <div>
+        <label>Luggage : </label>
+        <select name="baggage"
+                [ngModel]="detail?.baggage">
+
+            <option *ngFor="let i of baggage"
+                    [selected]="i.key === detail?.baggage"
+                    [value]="i.key">
+                {{ i.value }}
+            </option>
+
+        </select>
+    </div>
+    <div *ngIf="form.value.checkIn">
+        <label>checkInDate : </label> 
+        <input type="number" 
+               name="checkInDate"
+               [ngModel]="detail?.checkInDate"> 
+    </div>
+    <!-- {{ form.value | json }} -->
+</form>
